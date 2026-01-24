@@ -17,7 +17,7 @@ namespace Ecommerce.Controllers
         public IActionResult Index()
         {
             List<Category> objCategoryList = _db.categories.ToList();
-            return View();
+            return View(objCategoryList);
         }
     }
 }
