@@ -13,20 +13,18 @@
         <th>
             Display Order
         </th>
-        <th>
-            History
-        </th>
+       
 
     </tr>
     </thead>
 
     <tbody>
-        @foreach (var obj in Model)
+        @foreach (var obj in Model.OrderBy(u=>u.DisplayOrder))
         {
             <tr>
                 <td>@obj.Name</td>
-            <td>Display order</td>
-            <td>History</td>
+            <td>@obj.DisplayOrder</td>
+            
         </tr>}
     </tbody>
 
