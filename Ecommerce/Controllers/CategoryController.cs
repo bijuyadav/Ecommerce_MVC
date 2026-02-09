@@ -1,6 +1,7 @@
 ﻿using Ecommerce.Data;
 using Ecommerce.Models;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
 
 namespace Ecommerce.Controllers
 {
@@ -18,6 +19,11 @@ namespace Ecommerce.Controllers
         {
             List<Category> objCategoryList = _db.categories.ToList();
             return View(objCategoryList);
+        }
+
+        public IActionResult Create()
+        {
+            return View();
         }
     }
 }
